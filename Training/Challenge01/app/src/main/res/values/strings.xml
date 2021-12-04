@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Challenge01</string>
+    <string name="pick_image">pick image</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="register">Register</string>
+    <string name="condiciones_uso">Movidas legales no se que no se cuanto blabla bla acepto noseke movida y no se que otra pim pam</string>
+    <string name="i_agree">I agree</string>
+
+    <string-array name="countries">
+        <item> Germany</item>
+        <item> Spain</item>
+        <item> Italy</item>
+        <item> France</item>
+    </string-array>
+
+</resources>

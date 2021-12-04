@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/parentRelative"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+    <ImageView
+        android:id="@+id/profilePic"
+
+        android:layout_width="85dp"
+        android:layout_height="87dp"
+
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="30sp"
+        android:src="@mipmap/ic_picture01_round"
+
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/pickImage"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/pick_image"
+
+        android:layout_toEndOf="@+id/profilePic"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="50sp"
+
+    />
+
+    <EditText
+        android:id="@+id/editTextName"
+
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/profilePic"
+
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/name"
+
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextName"
+
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/email"
+
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextEmail"
+
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/password"
+
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/editConfirmTextPassword"
+
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextPassword"
+
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/confirm_password"
+
+        tools:ignore="Autofill,TextFields" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editConfirmTextPassword"
+        android:layout_marginTop="10sp"
+        android:layout_alignStart="@+id/editConfirmTextPassword"
+        android:orientation="horizontal"
+
+    >
+
+        <RadioButton
+            android:id="@+id/radioButton01"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/radioButton02"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/female"
+
+        />
+
+        <RadioButton
+            android:id="@+id/radioButton03"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/other"
+
+            />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/radioGroup01"
+        android:layout_alignStart="@+id/radioGroup01"
+        android:layout_marginTop="0sp"
+
+        android:entries="@array/countries"
+        />
+
+    <Button
+        android:id="@+id/buttonRegister"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/register"
+
+        android:layout_marginTop="0sp"
+
+        android:layout_below="@+id/spinner01"
+        android:layout_centerHorizontal="true"
+    />
+
+    <TextView
+        android:id="@+id/textView01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/condiciones_uso"
+        android:layout_toEndOf="@+id/editTextName"
+
+        android:layout_below="@+id/editTextName"
+        android:layout_marginStart="10sp"
+    />
+
+    <CheckBox
+        android:id="@+id/checkBox01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView01"
+
+        android:layout_alignStart="@+id/textView01"
+
+        android:layout_marginTop="30sp"
+        android:text="@string/i_agree" />
+
+
+
+</RelativeLayout>

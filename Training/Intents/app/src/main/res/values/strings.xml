@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Intents</string>
+    <string name="see_all_books">See all books</string>
+    <string name="currently_reading">Currently Reading</string>
+    <string name="already_read_books">Already read books</string>
+    <string name="want_to_read">Want to read</string>
+    <string name="favorite_books">Favorite books</string>
+    <string name="about">About</string>
+    <string name="developed_by_samuel">developed by samuel</string>
+    <string name="my_library">My library</string>
+    <string name="avatar">avatar</string>
+    <string name="list_all_books">list all books</string>
+    <string name="developed_by_samuel_alonso">developed by samuel alonso</string>
+    <string name="reading">Reading</string>
+    <string name="list_all_books1">List all books</string>
+    <string name="already_read">Already read</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="favourite_books">Favourite books</string>
+
+</resources>

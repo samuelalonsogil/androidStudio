@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Menu01</string>
+
+    <string name="settingsMenu">Settings</string>
+
+    <string name="editMenu">Edit</string>
+
+    <string name="title"> Menu activity</string>
+</resources>

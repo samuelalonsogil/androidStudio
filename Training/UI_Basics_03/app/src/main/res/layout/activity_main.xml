@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <!--checkBoxes-->
+    <RelativeLayout
+        android:id="@+id/moviesLayoyut"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+        >
+
+
+        <CheckBox
+            android:id="@+id/checkBoxSW01"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:checked="false"
+
+            android:text="Star Wars Episode I" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSW02"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Star Wars Episode II"
+
+            android:checked="false"
+
+            android:layout_below="@+id/checkBoxSW01"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBoxSW03"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Star Wars Episode III"
+
+            android:checked="false"
+
+            android:layout_below="@+id/checkBoxSW02"
+            />
+
+
+    </RelativeLayout>
+
+    <!--radioButtons-->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/moviesLayoyut"
+
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="25dp"
+
+        android:layout_centerHorizontal="true"
+
+        android:orientation="vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton01"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/moviesLayoyut"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+
+            android:text="Hijo de puta peligroso"
+
+            android:checked="false"
+
+
+
+            />
+        <RadioButton
+            android:id="@+id/radioButton02"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/moviesLayoyut"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+
+            android:text="Cabronazo"
+
+            android:checked="false"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton03"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/moviesLayoyut"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+
+            android:text="Cid"
+
+            android:checked="false"
+
+
+
+            />
+
+
+
+
+    </RadioGroup>
+
+    <!--radioButtons-->
+    <ProgressBar
+        android:id="@+id/progressBar01"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/radioGroup"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="30dp"
+
+        android:visibility="visible"
+
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:min="0"
+        android:max="100"
+        android:padding="30dp"
+
+        />
+
+
+
+
+
+
+</RelativeLayout>

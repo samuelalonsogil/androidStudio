@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ListViewAndSpinner</string>
+    <string-array name="students">
+
+        <item>Samuel</item>
+        <item>Max</item>
+        <item>Yari</item>
+        <item>Martin</item>
+
+    </string-array>
+
+</resources>

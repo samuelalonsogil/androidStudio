@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--all elements line after line -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        >
+
+        <TextView
+            android:id="@+id/textView03"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Hello world"
+
+            android:layout_centerInParent="true"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        >
+
+        <TextView
+            android:id="@+id/textView01"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:layout_weight="10"
+            android:background="#00B0FF"
+
+            android:text="hello world"
+
+            android:layout_marginLeft="100dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/textView02"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+
+            android:layout_weight="90"
+            android:background="@color/purple_200"
+            android:text="Name" />
+
+    </RelativeLayout>
+
+</LinearLayout>

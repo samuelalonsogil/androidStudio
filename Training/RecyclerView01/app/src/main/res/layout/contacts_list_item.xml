@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@+id/parentCardView"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10sp"
+    app:cardElevation="10sp"
+    app:cardCornerRadius="10sp"
+    android:layout_margin="10sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout01"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView01"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Contact name: "
+            android:textStyle="bold"
+
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <TextView
+            android:id="@+id/textView02"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="email: "
+            android:layout_marginStart="5sp"
+
+            android:layout_below="@+id/textView01"
+
+            android:layout_marginTop="20sp"
+
+            android:textStyle="italic"
+
+            />
+
+        <ImageView
+            android:id="@+id/image01"
+
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+
+            android:layout_below="@+id/textView02"
+
+            android:layout_centerHorizontal="true"
+            android:src="@color/purple_200"
+
+            android:layout_marginTop="20sp"
+
+            android:layout_margin="20sp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

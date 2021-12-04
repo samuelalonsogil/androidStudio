@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+
+    android:padding="100dp"
+    >
+
+    <TextView
+        android:id="@+id/textView01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="hello!"
+
+        android:layout_below="@+id/button01"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="30dp"
+
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/editTextName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+
+        android:hint="Name: "
+
+        android:textColor="#673AB7"
+        android:textStyle="italic"
+
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/button01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Hello there!"
+        android:layout_centerInParent="true"
+
+        android:layout_below="@+id/editTextName"
+
+        android:layout_marginTop="20dp"
+        />
+
+
+
+
+</RelativeLayout>

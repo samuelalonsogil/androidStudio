@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ObteniendoResultados</string>
+    <string name="introduce_un_dato">Introduce un dato:</string>
+    <string name="dato_1">Dato 1</string>
+
+    <string name="clicka">clicka</string>
+    <string name="dato_2">Dato 2</string>
+</resources>
