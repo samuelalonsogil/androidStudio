@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@color/pink"
+>
+
+    <TextView
+        android:id="@+id/textView01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:text="@string/actividad_2"
+        android:textColor="@color/purple_700"
+
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextNum01"
+
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView01"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="20sp"
+
+        android:hint="@string/num_1"
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/editTextNum02"
+
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView01"
+        android:layout_toEndOf="@+id/editTextNum01"
+        android:layout_marginStart="70sp"
+        android:layout_marginTop="20sp"
+
+        android:hint="@string/num_2"
+        tools:ignore="Autofill,TextFields" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextNum02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+
+        android:text="@string/multiplpy"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/buttonDivide"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonMultiply"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+
+        android:text="@string/divide"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/buttonToActivity1"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonDivide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+
+        android:text="@string/go_to_activity_1"
+        android:textAllCaps="false"
+        />
+
+    <EditText
+        android:id="@+id/editTextResult"
+
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonToActivity1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+
+        android:hint="@string/result"
+        tools:ignore="Autofill,TextFields" />
+
+
+</RelativeLayout>

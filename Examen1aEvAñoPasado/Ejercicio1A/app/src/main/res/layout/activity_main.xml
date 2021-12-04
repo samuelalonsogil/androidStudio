@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/yellow"
+>
+
+    <TextView
+        android:id="@+id/textView01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/actividad_1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+    />
+
+    <EditText
+        android:id="@+id/editTextNum01"
+
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView01"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="30sp"
+
+        android:hint="@string/num_1"
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/editTextNum02"
+
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView01"
+        android:layout_toEndOf="@+id/editTextNum01"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="70sp"
+        android:hint="@string/num_2"
+        tools:ignore="Autofill,TextFields" />
+
+    <Button
+        android:id="@+id/button01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextNum02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+
+        android:text="@string/go_to_activity_2"
+    />
+
+    <TextView
+        android:id="@+id/txtViewResult"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/button01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:text="@string/result"
+        android:textSize="20sp"
+    />
+
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ejercicio01AExamen1aEv</string>
+    <string name="actividad_1">Actividad 1</string>
+    <string name="num_1">Num 1</string>
+    <string name="num_2">Num 2</string>
+    <string name="go_to_activity_2">go to activity 2</string>
+    <string name="actividad_2">Actividad 2</string>
+    <string name="multiplpy">Multiplpy</string>
+    <string name="divide">Divide</string>
+    <string name="go_to_activity_1">Go to Activity 1</string>
+    <string name="result">result:</string>
+
+</resources>
