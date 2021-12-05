@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ejercicio3A</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="product_info">Product Info</string>
+    <string name="features">Features</string>
+    <string name="installation">Installation</string>
+    <string name="parameters_info">Parameters Info</string>
+    <string name="supported_browsers">Supported Browsers</string>
+    <string name="supported_browser_01">Supported Browser 01</string>
+    <string name="installation_01">Installation 01</string>
+    <string name="css3_info">CSS3 Info</string>
+    <string name="samples">Samples</string>
+    <string name="download">Download</string>
+</resources>

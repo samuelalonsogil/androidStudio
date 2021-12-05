@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/options"
+        android:icon="@drawable/ic_baseline_flower"
+        app:showAsAction="ifRoom"
+        android:title="" >
+
+        <menu>
+            <item
+                android:id="@+id/home"
+                android:title="@string/home"
+                android:icon="@drawable/ic_baseline_home"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/producInfo"
+                android:title="@string/product_info"
+                android:icon="@drawable/ic_baseline_bubble"
+                app:showAsAction = "never">
+
+                <menu>
+                    <item
+                        android:id="@+id/features"
+                        android:title="@string/features"
+                        app:showAsAction = "never" />
+
+                    <item
+                        android:id="@+id/installation"
+                        android:title="@string/installation"
+                        app:showAsAction = "never">
+
+                        <menu>
+                            <item
+                                android:id="@+id/installation01"
+                                android:title="@string/installation_01"
+                                app:showAsAction = "never" />
+                        </menu>
+
+                    </item>
+
+                    <item
+                        android:id="@+id/parametersInfo"
+                        android:title="@string/parameters_info"
+                        app:showAsAction = "never"
+                        />
+
+                    <item
+                        android:id="@+id/supportedBrowser"
+                        android:title="@string/supported_browsers"
+                        app:showAsAction = "never" >
+
+                        <menu>
+                            <item
+                                android:id="@+id/supportedBrowser01"
+                                android:title="@string/supported_browser_01"
+                                app:showAsAction = "never" />
+                        </menu>
+                    </item>
+
+                    <item
+                        android:id="@+id/cSS3Info"
+                        android:title="@string/css3_info"
+                        app:showAsAction = "never"
+                        />
+                </menu>
+
+            </item>
+
+            <item
+                android:id="@+id/samples"
+                android:title="@string/samples"
+                android:icon="@drawable/ic_baseline_star_24"
+                app:showAsAction = "never"
+                />
+
+            <item
+                android:id="@+id/download"
+                android:title="@string/download"
+                android:icon="@drawable/ic_baseline_shopping_cart_24"
+                app:showAsAction = "never"
+                />
+        </menu>
+
+    </item>
+
+
+
+
+</menu>

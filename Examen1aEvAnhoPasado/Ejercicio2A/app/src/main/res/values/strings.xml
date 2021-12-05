@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ejercicio2A</string>
+    <string name="conversor_de_temperaturas">Conversor de temperaturas</string>
+    <string name="introduce_la_cantidad">Introduce la cantidad:</string>
+    <string name="resultado2">resultado</string>
+    <string name="calcular">Calcular</string>
+
+    <string-array name="temperaturas">
+        <item> Kelvin </item>
+        <item> Celsius </item>
+        <item> Fahrenheit </item>
+        <item> Rankine </item>
+        <item> Réamur </item>
+    </string-array>
+</resources>

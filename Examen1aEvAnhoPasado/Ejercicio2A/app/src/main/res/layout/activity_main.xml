@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/yellow"
+>
+
+    <TextView
+        android:id="@+id/textView01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/conversor_de_temperaturas"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+    />
+
+    <EditText
+        android:id="@+id/editTextCantidad"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:hint="@string/introduce_la_cantidad"
+        android:inputType="numberDecimal|number"
+
+        tools:ignore="Autofill,TextFields" />
+
+    <Spinner
+        android:id="@+id/spinnerTipos"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextCantidad"
+        android:layout_marginTop="30sp"
+        android:layout_centerHorizontal="true"
+
+        android:entries="@array/temperaturas"
+
+    />
+
+    <TextView
+        android:id="@+id/textViewResultado01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/spinnerTipos"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="30sp"
+        android:text="@string/resultado2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewResultado02"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/spinnerTipos"
+        android:layout_toEndOf="@+id/textViewResultado01"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="30sp"
+        android:text="@string/resultado2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewResultado03"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textViewResultado01"
+        android:layout_marginStart="90sp"
+        android:layout_marginTop="30sp"
+        android:text="@string/resultado2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewResultado04"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textViewResultado02"
+        android:layout_toEndOf="@+id/textViewResultado01"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="30sp"
+        android:text="@string/resultado2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button01"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textViewResultado03"
+        android:layout_marginTop="30sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/calcular"
+    />
+
+</RelativeLayout>
