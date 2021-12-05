@@ -6,10 +6,11 @@
     <string name="calcular">Calcular</string>
 
     <string-array name="temperaturas">
+        <item>Selecciona</item>
         <item> Kelvin </item>
         <item> Celsius </item>
         <item> Fahrenheit </item>
         <item> Rankine </item>
-        <item> Réamur </item>
+        <item> Reamur </item>
     </string-array>
 </resources>

@@ -16,13 +16,12 @@ import android.widget.Toast;
     dato numérico en un EditText y tipo de unidad en un Spinner y convierte a otras cuatro
     unidades de medida.*/
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText editText01;
     Spinner spinner01;
-    Button button01;
     TextView textView01, textView02, textView03, textView04 ;
-    private Object AdapterView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         
         initVariables();
-        button01.setOnClickListener(this);
+
         spinner01.setOnItemSelectedListener(this);
     }
 
     private void initVariables() {
         editText01 = findViewById(R.id.editTextCantidad);
         spinner01 = findViewById(R.id.spinnerTipos);
-        button01 = findViewById(R.id.button01);
+        //button01 = findViewById(R.id.button01);
 
         textView01 = findViewById(R.id.textViewResultado01);
         textView02 = findViewById(R.id.textViewResultado02);
@@ -46,32 +45,132 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    @Override
-    public void onClick(View v) {
-        textView01.setVisibility(View.VISIBLE);
 
-    }
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String option = parent.getSelectedItem().toString();
-
-        //float medida= Float.parseFloat( editText01.getText().toString() );
 
 
+        String valor = editText01.getText().toString();
 
-        /*if (option.equals("Kelvin")) {
-            System.out.println( "Grados Celsius: " + (medida - 273.15) );
-            textView01.setText( "Grados Celsius: " + (medida - 273.15) );
-        }*/
+        if (parent.getSelectedItem().equals("Selecciona")) {
+            textView01.setText("");
+            textView02.setText("");
+            textView03.setText("");
+            textView04.setText("");
+        } else if (parent.getSelectedItem().equals("Kelvin")) {
+            textView01.setText(valor);
+            double valorDouble = Double.parseDouble(valor);
+            double valorKaC = (valorDouble - 273.15);
+            String resultado = String.valueOf(valorKaC);
+            textView01.setText("En celsius: " + resultado);
+
+            textView02.setText(valor);
+            double valorKaF = (valorDouble - 273.15) * 9 / 5 + 32;
+            resultado = String.valueOf(valorKaF);
+            textView02.setText("En Fahrenheit: " + resultado);
+
+            textView03.setText(valor);
+            double valorKaR = valorDouble * 9 / 5;
+            resultado = String.valueOf(valorKaR);
+            textView03.setText("En rankine: " + resultado);
+
+            textView04.setText(valor);
+            double valorKaRea = (valorDouble - 274.5) * 4 / 5;
+            resultado = String.valueOf(valorKaRea);
+            textView04.setText("En reaumur: " + resultado);
+        } else if (parent.getSelectedItem().equals("Celsius")) {
+            textView01.setText(valor);
+            double valorDouble = Double.parseDouble(valor);
+            double valorCaK = (valorDouble + 273.15);
+            String resultado = String.valueOf(valorCaK);
+            textView01.setText("En kelvin: " + resultado);
+
+            textView02.setText(valor);
+            double valorCaF = (valorDouble * 9 / 5) + 32;
+            resultado = String.valueOf(valorCaF);
+            textView02.setText("En Fahrenheit: " + resultado);
+
+            textView03.setText(valor);
+            double valorKaR = (valorDouble + 273.5) * 9 / 5;
+            resultado = String.valueOf(valorKaR);
+            textView03.setText("En rankine: " + resultado);
+
+            textView04.setText(valor);
+            double valorCaRea = valorDouble * 4 / 5;
+            resultado = String.valueOf(valorCaRea);
+            textView04.setText("En reaumur: " + resultado);
+        } else if (parent.getSelectedItem().equals("Fahrenheit")) {
+            textView01.setText(valor);
+            double valorDouble = Double.parseDouble(valor);
+            double valorFaK = (valorDouble + 459.67);
+            String resultado = String.valueOf(valorFaK);
+            textView01.setText("En kelvin: " + resultado);
+
+            textView02.setText(valor);
+            double valorCaF = (valorDouble - 32) * 5 / 9;
+            resultado = String.valueOf(valorCaF);
+            textView02.setText("En celsius: " + resultado);
+
+            textView03.setText(valor);
+            double valorRaF = valorDouble + 459.67;
+            resultado = String.valueOf(valorRaF);
+            textView03.setText("En rankine: " + resultado);
+
+            textView04.setText(valor);
+            double valorFaRea = (valorDouble - 32) * 4 / 5;
+            resultado = String.valueOf(valorFaRea);
+            textView04.setText("En reaumur: " + resultado);
+
+        }
+        else if (parent.getSelectedItem().equals("Rankine")) {
+            textView01.setText(valor);
+            double valorDouble = Double.parseDouble(valor);
+            double valorRaK = valorDouble * 5/9;
+            String resultado = String.valueOf(valorRaK);
+            textView01.setText("En kelvin: " + resultado);
+
+            textView02.setText(valor);
+            double valorRaC = (valorDouble - 491.67) * 5 / 9;
+            resultado = String.valueOf(valorRaC);
+            textView02.setText("En celsius: " + resultado);
+
+            textView03.setText(valor);
+            double valorRaF = (valorDouble - 459.67) * 5/9;
+            resultado = String.valueOf(valorRaF);
+            textView03.setText("En fahrenheit: " + resultado);
+
+            textView04.setText(valor);
+            double valorRaRea = (valorDouble - 491.67) * 4 / 9;
+            resultado = String.valueOf(valorRaRea);
+            textView04.setText("En reaumur: " + resultado);
+
+        }
+        else if (parent.getSelectedItem().equals("Reamur")) {
+            textView01.setText(valor);
+            double valorDouble = Double.parseDouble(valor);
+            double valorReaaK = (valorDouble * 5/4) + 273.15;
+            String resultado = String.valueOf(valorReaaK);
+            textView01.setText("En kelvin: " + resultado);
+
+            textView02.setText(valor);
+            double valorReaaC = valorDouble * 5 / 4;
+            resultado = String.valueOf(valorReaaC);
+            textView02.setText("En celsius: " + resultado);
+
+            textView03.setText(valor);
+            double valorReaaF = (valorDouble * 9/4) + 32;
+            resultado = String.valueOf(valorReaaF);
+            textView03.setText("En fahrenheit: " + resultado);
+
+            textView04.setText(valor);
+            double valorReaaR = (valorDouble * 9/4) + 491.67;
+            resultado = String.valueOf(valorReaaR);
+            textView04.setText("En rankine: " + resultado);
+
+        }
     }
-
-/* + "\n" +
-                                "Grados Fahrenheit: " + (temperatura * 1.8 - 459.67) + "\n" +
-                                "Rankine: " + (temperatura * 1.8) + "\n" +
-                                "Grado Réaumur: " + ( ( temperatura -273.15) *  0.8) );*/
-
     @Override
     public void onNothingSelected(android.widget.AdapterView<?> parent) {
 
