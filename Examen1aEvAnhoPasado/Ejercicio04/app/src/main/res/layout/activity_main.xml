@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/green">
+
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/team_list"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+    />
+
+    <Spinner
+        android:id="@+id/spinnerTeams"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dialog"
+    />
+
+    <TextView
+        android:id="@+id/teamSelected"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text=""
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+
+        android:layout_below="@+id/spinnerTeams"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        />
+
+    <ImageView
+        android:id="@+id/shieldSelected"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/teamSelected"
+        android:layout_marginTop="30sp"
+        android:layout_centerHorizontal="true"
+
+    />
+
+</RelativeLayout>
