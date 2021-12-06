@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ejercicio1B</string>
+    <string name="introduce_dos_n_meros">Introduce dos números</string>
+    <string name="to_activity_2">To activity 2</string>
+    <string name="selecciona_una_operaci_n">Selecciona una operación</string>
+    <string name="sumar">Sumar</string>
+    <string name="restar">Restar</string>
+    <string name="volver">Volver</string>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@color/purple_200"
+    >
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:text="@string/selecciona_una_operaci_n"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTex01"
+
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/titulo"
+        android:layout_alignStart="@+id/titulo"
+        android:layout_marginTop="20sp"
+        />
+
+    <EditText
+        android:id="@+id/editTex02"
+
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/titulo"
+        android:layout_alignEnd="@+id/titulo"
+        android:layout_marginTop="20sp"
+        />
+
+    <TextView
+        android:id="@+id/resultadoOperacion"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTex02"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text=""
+    />
+
+    <Button
+        android:id="@+id/buttonSuma"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/resultadoOperacion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="@string/sumar"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        />
+
+    <Button
+        android:id="@+id/buttonRestar"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonSuma"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="@string/restar"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        />
+
+    <Button
+        android:id="@+id/buttonVolver"
+
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonRestar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="@string/volver"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        />
+
+
+
+</RelativeLayout>

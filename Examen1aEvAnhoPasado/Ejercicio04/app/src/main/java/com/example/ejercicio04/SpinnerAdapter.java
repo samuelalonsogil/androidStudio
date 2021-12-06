@@ -26,8 +26,6 @@ public class SpinnerAdapter extends ArrayAdapter<Team> {
         layoutInflater = LayoutInflater.from(context);
     }
 
-
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

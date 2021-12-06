@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
 
-    TextView teamSelected;
-    ImageView imageSelected;
-
     public Spinner spinner;
     public SpinnerAdapter spinnerAdapter;
 

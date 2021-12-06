@@ -18,6 +18,8 @@ public class Team {
         this.image = image;
     }
 
+    public Team() {
+    }
 
     public static void addTeams() {
         teams.add(new Team("Chelsea FC", "England", "London", "1905", R.drawable.chelsea_escudo));
