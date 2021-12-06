@@ -1,20 +1,11 @@
 package com.example.ejercicio04;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -38,4 +29,6 @@ public class MainActivity extends AppCompatActivity{
         spinnerAdapter = new SpinnerAdapter(MainActivity.this,R.layout.fila, Team.getTeams() );
         spinner.setAdapter(spinnerAdapter);
     }
+
+
 }

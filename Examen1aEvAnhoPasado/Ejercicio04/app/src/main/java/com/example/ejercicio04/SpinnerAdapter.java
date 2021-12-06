@@ -36,11 +36,18 @@ public class SpinnerAdapter extends ArrayAdapter<Team> {
 
         Team team = getItem(position);
         textView01 = rowView.findViewById(R.id.nameTeam);
-        textView02 = rowView.findViewById(R.id.country);
-        textView03 = rowView.findViewById(R.id.city);
-        textView04 = rowView.findViewById(R.id.year);
-        imageView = rowView.findViewById(R.id.imageShield);
+        textView01.setText(team.getName());
 
+        textView02 = rowView.findViewById(R.id.country);
+        textView02.setText(team.getCountry());
+
+        textView03 = rowView.findViewById(R.id.city);
+        textView03.setText(team.getCity());
+
+        textView04 = rowView.findViewById(R.id.year);
+        textView04.setText(team.getYear());
+
+        imageView = rowView.findViewById(R.id.imageShield);
         imageView.setImageResource(team.getImages());
 
         return rowView;
