@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView01"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutInsideCard"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        >
+
+            <ImageView
+                android:id="@+id/bandera"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_launcher_background"
+            />
+
+            <TextView
+                android:id="@+id/nombre"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                android:layout_toEndOf="@+id/bandera"
+                android:layout_marginStart="30sp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+            />
+
+            <TextView
+                android:id="@+id/capital"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/capital"
+                android:layout_toEndOf="@+id/bandera"
+                android:layout_marginStart="30sp"
+                android:layout_below="@+id/nombre"
+                android:textSize="15sp"
+            />
+
+            <TextView
+                android:id="@+id/poblacion"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/poblacion"
+                android:layout_toEndOf="@+id/bandera"
+                android:layout_marginStart="30sp"
+                android:layout_below="@+id/capital"
+                android:textSize="15sp"
+            />
+
+            <TextView
+                android:id="@+id/territorio"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/territorio"
+                android:layout_toEndOf="@+id/bandera"
+                android:layout_marginStart="30sp"
+                android:layout_below="@+id/poblacion"
+                android:textSize="15sp"
+            />
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

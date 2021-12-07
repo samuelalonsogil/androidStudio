@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Ejercicio4B</string>
+    <string name="nombre">Nombre</string>
+    <string name="capital">Capital</string>
+    <string name="poblacion">poblacion</string>
+    <string name="territorio">territorio</string>
+
+    <string-array name="programming_languages">
+
+        <item>C++</item>
+        <item>JavaScript</item>
+        <item>Python</item>
+
+
+    </string-array>
+
+    <string-array name="description">
+
+        <item>description01</item>
+        <item>description01</item>
+        <item>description01</item>
+
+
+    </string-array>
+</resources>
