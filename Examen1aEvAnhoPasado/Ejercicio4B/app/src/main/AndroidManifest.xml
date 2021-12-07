@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejercicio4B">
         <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="Deatails"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

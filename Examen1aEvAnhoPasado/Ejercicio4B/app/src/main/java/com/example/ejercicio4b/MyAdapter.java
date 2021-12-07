@@ -1,13 +1,13 @@
 package com.example.ejercicio4b;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,15 +17,18 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     ArrayList<Estados> estados;
+    Context context;
+    Intent intent;
 
-    public MyAdapter( ArrayList<Estados> estados) {
+    public MyAdapter( Context context, ArrayList<Estados> estados) {
+        this.context = context;
         this.estados = estados;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
 
         View view = layoutInflater.inflate(R.layout.my_row, parent, false );
 
@@ -40,7 +43,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         holder.textView02.setText(estados.get(position).getCapital());
         holder.textView03.setText(estados.get(position).getHabitantes());
         holder.textView04.setText(estados.get(position).getExtension());
+
         holder.imageView01.setImageResource(estados.get(position).getBandera());
+
+        holder.relativeLayout.setOnClickListener(v -> {
+            intent = new Intent(context, SecondActivity.class);
+
+            intent.putExtra("nombre", estados.get(position).getNombre() );
+            intent.putExtra("capital", estados.get(position).getCapital() );
+            intent.putExtra("habitantes", estados.get(position).getHabitantes() );
+            intent.putExtra("extension", estados.get(position).getExtension() );
+            intent.putExtra("bandera", estados.get(position).getBandera() );
+
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -55,6 +71,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
         TextView textView01, textView02, textView03, textView04;
         ImageView imageView01;
+        RelativeLayout relativeLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +81,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
             textView04 = itemView.findViewById(R.id.territorio);
 
             imageView01 = itemView.findViewById(R.id.bandera);
+
+            relativeLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
 

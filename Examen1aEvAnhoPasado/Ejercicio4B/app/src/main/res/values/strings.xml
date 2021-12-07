@@ -4,6 +4,8 @@
     <string name="capital">Capital</string>
     <string name="poblacion">poblacion</string>
     <string name="territorio">territorio</string>
+    <string name="texto_01">Texto 01</string>
+    <string name="texto_02">Texto 02</string>
 
     <string-array name="programming_languages">
 
