@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:text="@string/select_one_item"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+    />
+
+    <ListView
+        android:id="@+id/listView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20sp"
+    />
+
+    <ImageView
+        android:id="@+id/imageSelected"
+        android:layout_width="96dp"
+        android:layout_height="92dp"
+        android:layout_below="@+id/listView01"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="40sp"
+        android:contentDescription="@string/image_picked"
+        android:src="@drawable/ic_launcher_background"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/nameSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listView01"
+        android:layout_toEndOf="@+id/imageSelected"
+        android:text="@string/text"
+        android:textSize="25sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginStart="30sp"
+        android:visibility="invisible"
+    />
+
+
+
+</RelativeLayout>

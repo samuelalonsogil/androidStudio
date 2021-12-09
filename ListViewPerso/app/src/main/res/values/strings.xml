@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ListViewPerso</string>
+    <string name="select_one_item">Select one item</string>
+    <string name="text">Text</string>
+    <string name="image_picked">image picked</string>
+    <string name="iamge_for_every_item">iamge for every item</string>
+    <string name="item">Item</string>
+    <string name="description">description</string>
+</resources>
