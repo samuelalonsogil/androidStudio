@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="selecciona">Selecciona:</string>
+    <string name="item_selected">item selected</string>
+    <string name="image_of_item_selected">image of item selected</string>
+    <string name="imagedefault">imageDefault</string>
+    <string name="item">Item</string>
+    <string name="description">description</string>
+</resources>
