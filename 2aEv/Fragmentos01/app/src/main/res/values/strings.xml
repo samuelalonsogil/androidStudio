@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Fragmentos01</string>
+    <string name="fragment_01">Fragment 01</string>
+    <string name="fragment_02">Fragment 02</string>
+    <string name="go_to_fragment_02">go to fragment 02</string>
+    <string name="go_to_fragment_01">go to fragment 01</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_one">Fragment One</string>
+    <string name="fragment_two">Fragment Two</string>
+    <string name="select_one_option">Select one option:</string>
+    <string name="to_fragment_02">to fragment 02</string>
+    <string name="to_fragment_01">to fragment 01</string>
+</resources>
