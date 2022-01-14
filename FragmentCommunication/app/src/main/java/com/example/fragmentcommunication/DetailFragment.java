@@ -26,7 +26,7 @@ public class DetailFragment extends Fragment {
         if(bundle != null && bundle.containsKey(KEY_COUNTRY_NAME) ) showSelectedCountry(bundle.getString(KEY_COUNTRY_NAME));
     }
 
-    private void showSelectedCountry(String countryName) {
+    public void showSelectedCountry(String countryName) {
         ( (TextView)getView().findViewById(R.id.textView01) ).setText(countryName);
     }
 }

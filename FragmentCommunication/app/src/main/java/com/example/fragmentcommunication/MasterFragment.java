@@ -2,6 +2,7 @@ package com.example.fragmentcommunication;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -32,9 +33,13 @@ public class MasterFragment extends ListFragment {
         setListAdapter(listAdapter);
         getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
-        getListView().setOnClickListener(view1 -> {
-            if (masterSelectedListener != null)
-                masterSelectedListener.OnItemSelected( ((TextView) view1).getText().toString() );
+        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if (masterSelectedListener != null) {
+                    masterSelectedListener.OnItemSelected( ((TextView) view ).getText().toString() );
+                }
+            }
         });
     }
 
