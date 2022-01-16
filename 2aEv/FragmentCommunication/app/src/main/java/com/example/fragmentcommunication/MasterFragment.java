@@ -13,7 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.ListFragment;
 
 public class MasterFragment extends ListFragment {
-    private OnMasterSelectedListener masterSelectedListener = null;
+    public ListAdapter listAdapter;
+    private OnMasterSelectedListener masterSelectedListener;
+
+    /*PREPARAMOS UNA INTERFAZ PARA PASAR INFO*/
+    public interface OnMasterSelectedListener{
+        public void OnItemSelected(String countryName);
+    }
 
     /*PASAMOS LA INTERFAZ Y LA ASIGNAMOS LA DECLARADA A ESTA CLASE*/
     public void setOnMasterSelectedListener(OnMasterSelectedListener listener){
@@ -26,8 +32,8 @@ public class MasterFragment extends ListFragment {
         super.onViewCreated(view, savedInstanceState);
 
         /*PREPARAMOS LOS DATOS*/
-        String[] countries = new String[] { "China", "Francia", "España", "India", "Rusia", "UK" };
-        ListAdapter listAdapter = new ArrayAdapter<String>(
+        String[] countries = { "China", "Francia", "España", "India", "Rusia", "UK" };
+        listAdapter = new ArrayAdapter<String>(
                 getActivity(), android.R.layout.simple_list_item_1, countries );
 
         setListAdapter(listAdapter);
@@ -43,8 +49,5 @@ public class MasterFragment extends ListFragment {
         });
     }
 
-    /*PREPARAMOS UNA INTERFAZ PARA PASAR INFO*/
-    public interface OnMasterSelectedListener{
-        public void OnItemSelected(String countryName);
-    }
+
 }
