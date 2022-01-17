@@ -36,7 +36,7 @@ public class MasterFragment extends ListFragment {
 
         getListView().setOnItemClickListener((adapterView, view1, i, l) -> {
             if ( selectorMaster != null )
-                selectorMaster.onItemSelected( ((TextView) view1).getText().toString() );
+                selectorMaster.onItemSelected( (Textos.DIALOGUE[i]) );
         });
     }
 }

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemSelected(String texto) {
                 //texto = Textos.DIALOGUE[1];
-                sendText(texto);
+                sendText( (texto)  );
             }
         });
 
