@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         initVariables();
+        fragmentMode();
+    }
 
+    public void fragmentMode(){
         if (frameLayout != null){
             dualPanel = false;
 
@@ -64,11 +67,9 @@ public class MainActivity extends AppCompatActivity{
         masterFragment.setOnMasterSelectedListener(new MasterFragment.OnMasterSelectedListener() {
             @Override
             public void onItemSelected(String texto) {
-                //texto = Textos.DIALOGUE[1];
                 sendText( (texto)  );
             }
         });
-
     }
 
     public void sendText(String texto){
