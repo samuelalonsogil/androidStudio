@@ -12,15 +12,28 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView textViewRaw;
+    TextView textViewAsset;
+    StringBuilder stringBuilder;
+    BufferedReader bufferedReader;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.textView01);
-        textView.setText(getText(this.getResources().openRawResource(R.raw.raw_text )));
+        initVariables();
+        initText();
 
-        TextView textViewAsset = findViewById(R.id.textView02);
+    }
+
+    public void initVariables(){
+        textViewRaw = findViewById(R.id.textView01);
+        textViewAsset = findViewById(R.id.textView02);
+    }
+
+    public void initText(){
+        textViewRaw.setText(getText(this.getResources().openRawResource(R.raw.raw_text )));
         try{
             textViewAsset.setText(getText(this.getAssets().open("asset_text.txt")));
         }catch (IOException ioe){
@@ -29,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getText(InputStream inputStream){
-        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder = new StringBuilder();
         try{
             if (inputStream != null){
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
                 String newLine = null;
-                while((newLine = bufferedReader.readLine())!= null ){
+                while( (newLine = bufferedReader.readLine()) != null ){
                     stringBuilder.append(newLine + "\n");
                 }
                 inputStream.close();
