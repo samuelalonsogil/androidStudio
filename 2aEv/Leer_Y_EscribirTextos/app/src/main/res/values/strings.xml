@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Leer_Y_EscribirTextos</string>
+    <string name="mostrar_texto">mostrar texto</string>
+    <string name="escribir_texto">Escribir texto</string>
+</resources>
