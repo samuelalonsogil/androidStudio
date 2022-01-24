@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,40 +8,98 @@
     android:orientation="vertical"
     >
 
-    <Button
-        android:id="@+id/button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mostrar_texto"
-        />
-
-    <Button
-        android:id="@+id/button02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/escribir_texto"
-        />
     <TextView
         android:id="@+id/textView01"
 
         android:layout_width="wrap_content"
-        android:layout_height="0sp"
-        android:layout_weight="1"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70sp"
 
         />
-
-
 
     <TextView
         android:id="@+id/textView02"
 
         android:layout_width="wrap_content"
-        android:layout_height="0sp"
-        android:layout_weight="1"
-        android:gravity="center"
+        android:layout_height="wrap_content"
 
-
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView01"
+        android:layout_marginTop="20sp"
         />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/button01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/mostrar_texto"
+
+        android:layout_below="@+id/textView02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        />
+
+    <Button
+        android:id="@+id/button02"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/escribir_texto"
+
+        android:layout_below="@+id/button01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        />
+
+    <EditText
+        android:id="@+id/editText01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/escribe"
+
+        android:layout_below="@+id/button02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:visibility="invisible"
+    />
+
+    <EditText
+        android:id="@+id/editText02"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/escribe"
+
+        android:layout_below="@+id/editText01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/button03"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/introducir_textos"
+
+        android:layout_below="@+id/editText02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+
+        android:visibility="invisible"
+        />
+
+
+
+
+</RelativeLayout>

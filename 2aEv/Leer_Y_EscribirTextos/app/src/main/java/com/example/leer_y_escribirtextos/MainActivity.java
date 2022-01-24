@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -21,8 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView textViewAsset;
     StringBuilder stringBuilder;
     BufferedReader bufferedReader;
-    Button buttonMostrarTexto;
-    Button buttonEscribir;
+    Button buttonMostrarTexto, buttonEscribir, buttonIntroducir;
+    EditText editText01, editText02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewAsset = findViewById(R.id.textView02);
         buttonMostrarTexto = findViewById(R.id.button01);
         buttonEscribir = findViewById(R.id.button02);
+        buttonIntroducir = findViewById(R.id.button03);
+        editText01 = findViewById(R.id.editText01);
+        editText02 = findViewById(R.id.editText02);
     }
 
     public void initText(){
@@ -70,13 +75,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    public void writer(){
+        try {
+            FileWriter fileWriter01 = new FileWriter("src/main/assets/asset_text.txt");
+            FileWriter fileWriter02 = new FileWriter("src/main/res/raw/raw_text.txt");
+
+            fileWriter01.write(editText01.getText().toString());
+            fileWriter02.write(editText02.getText().toString());
+
+            fileWriter01.close();
+            fileWriter02.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public void onClick(View view) {
-        if (buttonMostrarTexto.getId() == R.id.button01){
+        if (view.getId() == R.id.button01){
             initText();
-        }else{
+        }else if(view.getId() == R.id.button02){
+            editText01.setVisibility(View.VISIBLE);
+            editText02.setVisibility(View.VISIBLE);
+            buttonIntroducir.setVisibility(View.VISIBLE);
 
+        }else if(view.getId() == R.id.button03){
+            writer();
         }
     }
 }
