@@ -19,13 +19,13 @@ public class DiccionarioDatabase extends SQLiteOpenHelper {
     DiccionarioDatabase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_DICTIONARY +
-                "(_id integer PRIMARY KEY," +
-                FIELD_WORD + " TEXT, " +
-                FIELD_DEFINITION + " TEXT);");
+        db.execSQL("CREATE TABLE " + TABLE_DICTIONARY + "(_id integer PRIMARY KEY," +
+                FIELD_WORD + " TEXT, " + FIELD_DEFINITION + " TEXT);");
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     //Handle database upgrade as needed
@@ -71,6 +71,20 @@ public class DiccionarioDatabase extends SQLiteOpenHelper {
         }
         return returnVal;
     }
+
+    public String getWord(long id) {
+        String returnVal = "";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery(
+                "SELECT word FROM " + TABLE_DICTIONARY + " WHERE _id = ?",
+                new String[]{String.valueOf(id)});
+        if (cursor.getCount() == 1) {
+            cursor.moveToFirst();
+            returnVal = cursor.getString(0);
+        }
+        return returnVal;
+    }
+
 
     public String getDefinition(long id) {
         String returnVal = "";
