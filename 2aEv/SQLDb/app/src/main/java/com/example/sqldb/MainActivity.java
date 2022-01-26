@@ -35,9 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
         editTextPalabra.setText(diccionarioDatabase.getWord(l));
         editTextDefinicion.setText(diccionarioDatabase.getDefinition(l));
-        Toast.makeText(MainActivity.this, diccionarioDatabase.getDefinition(l), Toast.LENGTH_SHORT).show();
+        diccionarioDatabase.deleteRecord(l);
+
     }
 
     @Override
