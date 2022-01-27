@@ -2,4 +2,5 @@
     <string name="app_name">SQLDb</string>
     <string name="palabra">Palabra:</string>
     <string name="definici_n">Definición</string>
+    <string name="add">add</string>
 </resources>
