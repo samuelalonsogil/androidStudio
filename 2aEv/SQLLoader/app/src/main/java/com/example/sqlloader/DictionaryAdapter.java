@@ -1,5 +1,6 @@
 package com.example.sqlloader;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.view.LayoutInflater;
@@ -21,9 +22,10 @@ public class DictionaryAdapter extends CursorAdapter {
                 .inflate(android.R.layout.simple_list_item_1,viewGroup,false);
     }
 
+    @SuppressLint("Range")
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
         textView = view.findViewById(android.R.id.text1);
-        textView.setText(cursor.getString(Integer.parseInt(getCursor().getColumnName(0) ) ) );
+        textView.setText(cursor.getString(getCursor().getColumnIndex("word")) );
     }
 }

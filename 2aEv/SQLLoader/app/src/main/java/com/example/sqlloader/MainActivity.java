@@ -16,89 +16,73 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,
-        AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener, LoaderManager.LoaderCallbacks<Cursor> {
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    EditText editTextPalabra, editTextDefinicion;
-    DiccionarioDatabase diccionarioDatabase;
-    ListView listView;
-    Button button01;
-    SimpleCursorAdapter simpleCursorAdapter;
-    DictionaryAdapter dictionaryAdapter;
+    EditText mEditTextWord;
+    EditText mEditTextDefinition;
+    DiccionarioDatabase mDB;
+    ListView mListView;
+    DictionaryAdapter mAdapter;
 
-    public void initVariables(){
-        dictionaryAdapter = new DictionaryAdapter();
-        diccionarioDatabase = new DiccionarioDatabase(MainActivity.this);
-        editTextPalabra = findViewById(R.id.editText01);
-        editTextDefinicion = findViewById(R.id.editText02);
-        button01 = findViewById(R.id.button01);
-        listView = findViewById(R.id.listView);
-    }
 
-    @Override
-    public void onClick(View view) {
-        saveRecord();
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-        editTextPalabra.setText(diccionarioDatabase.getWord(l));
-        editTextDefinicion.setText(diccionarioDatabase.getDefinition(l));
-        diccionarioDatabase.deleteRecord(l);
-
-    }
-
-    @Override
-    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(MainActivity.this,
-                "Records deleted = " + diccionarioDatabase.deleteRecord(l), Toast.LENGTH_SHORT).show();
-        updateWordList();
-        return true;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        initVariables();
-        button01.setOnClickListener(this);
-        listView.setOnItemClickListener(this);
-        listView.setOnItemLongClickListener(this);
-        updateWordList();
+        mDB = new DiccionarioDatabase(this);
+        mEditTextWord = findViewById(R.id.editText01);
+        mEditTextDefinition = findViewById(R.id.editText02);
+        Button buttonAddUpdate = findViewById(R.id.button01);
+        buttonAddUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveRecord();
+            }
+        });
+        mListView = findViewById(R.id.listView);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,
+                        mDB.getDefinition(id),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "Records deleted = " + mDB.deleteRecord(id),
+                        Toast.LENGTH_SHORT).show();
+                getSupportLoaderManager().restartLoader(0, null, MainActivity.this);
+                return true;
+            }
+        });
+        getSupportLoaderManager().initLoader(0, null, this);
+        mAdapter = new DictionaryAdapter(this,mDB.getWordList(),0);
+        mListView.setAdapter(mAdapter);
     }
 
     private void saveRecord() {
-        diccionarioDatabase.saveRecord(editTextPalabra.getText().toString(), editTextDefinicion.getText().toString());
-        editTextPalabra.setText("");
-        editTextDefinicion.setText("");
-        updateWordList();
-    }
-
-    private void updateWordList() {
-        simpleCursorAdapter = new SimpleCursorAdapter(this,
-                android.R.layout.simple_list_item_1,
-                diccionarioDatabase.getWordList(),
-                new String[]{"word"},
-                new int[]{android.R.id.text1},
-                0);
-        listView.setAdapter(simpleCursorAdapter);
+        mDB.saveRecord(mEditTextWord.getText().toString(), mEditTextDefinition.getText().toString());
+        mEditTextWord.setText("");
+        mEditTextDefinition.setText("");
+        getSupportLoaderManager().restartLoader(0, null, MainActivity.this);
     }
 
     @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
-        return null;
+        return new DictionaryLoader(this);
     }
 
     @Override
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-
+        mAdapter.swapCursor(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-
+        mAdapter.swapCursor(null);
     }
 }
