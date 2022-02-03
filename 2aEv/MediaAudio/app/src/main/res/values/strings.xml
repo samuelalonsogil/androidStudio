@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MediaAudio</string>
+    <string name="play">play</string>
+    <string name="pause">pause</string>
+    <string name="stop">stop</string>
+    <string name="playin">Reproduciendo temita</string>
+    <string name="reproduciendo">reproduciendo</string>
+    <string name="pausaste">pausaste</string>
+    <string name="nada_que_pausar">no estabas escuchando nada</string>
+    <string name="parao">parao</string>
+    <string name="nada_para_parar">nada que parar</string>
+</resources>
