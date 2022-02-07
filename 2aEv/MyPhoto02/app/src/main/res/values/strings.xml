@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyPhoto02</string>
+    <string name="thumbnailButton">Hacer foto</string>
+    <string name="thumbnailText">Y obtener thumbnail…</string>
+    <string name="guardarFoto">Hacer foto</string>
+    <string name="guardarFotoText">Y guardarla en su tamaño real…</string>
+
+</resources>
