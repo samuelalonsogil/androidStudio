@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextURL"
+
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+
+        android:text="@string/http"
+    />
+
+    <Button
+        android:id="@+id/button01"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/download"
+        android:textAllCaps="false"
+
+        android:layout_below="@+id/editTextURL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+    />
+
+    <ImageView
+        android:id="@+id/imageView01"
+
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+
+        android:layout_below="@+id/button01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+
+        android:contentDescription="@string/image_downloaded" />
+
+</RelativeLayout>

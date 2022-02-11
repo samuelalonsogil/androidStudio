@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/url_a_descargar"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        />
+
+    <EditText
+        android:id="@+id/editTextURL"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:inputType="textUri"
+
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="@string/http"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+/>
+
+    <Button
+        android:id="@+id/button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/download"
+
+        android:layout_below="@+id/editTextURL"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20sp"
+        />
+</RelativeLayout>

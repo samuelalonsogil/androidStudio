@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void Descargar(View v){
-        txtDescarga.setMovementMethod(new ScrollingMovementMethod());
+        txtDescarga.setMovementMethod(new ScrollingMovementMethod() );
 
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Dada una URL, establece una conexión HttpUrlConnection y devuelve
         // el contenido de la página web con un InputStream, y que se transforma a un String.
+
         private String descargaUrl(String myurl) throws IOException {
             InputStream is = null;
 
