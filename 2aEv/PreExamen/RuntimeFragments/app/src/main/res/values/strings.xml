@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RuntimeFragments</string>
+    <string name="fragment_one">Fragment one</string>
+    <string name="fragment_two">Fragment two</string>
+    <string name="switch_fragment">switch fragment</string>
+    <string name="fragment_default">Fragment default</string>
+    <string name="to_fragment_01">to fragment 01</string>
+    <string name="to_fragment_02">to fragment 02</string>
+</resources>
