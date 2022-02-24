@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    
+    <FrameLayout
+        android:id="@+id/framelayoutMaster"
+        
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+    />
+
+    <FrameLayout
+        android:id="@+id/framelayoutDetail"
+
+        android:layout_width="0sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+
+    />
+    
+
+</LinearLayout>
