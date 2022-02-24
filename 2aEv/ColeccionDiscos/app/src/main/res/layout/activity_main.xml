@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+    <TextView
+        android:id="@+id/textViewGrupo"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/grupo"
+        android:textSize="20sp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/txtGrupo"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_toEndOf="@+id/textViewGrupo"
+        />
+
+    <TextView
+        android:id="@+id/lblDisco"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/disco"
+
+        android:layout_below="@+id/txtGrupo"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/borrar"
+
+        android:layout_toEndOf="@+id/textViewGrupo"
+        android:layout_marginLeft="50sp"
+        android:onClick="Borrar"
+        android:layout_below="@+id/txtDisco"
+        android:layout_alignStart="@+id/txtDisco" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listaDiscos"
+        android:layout_below="@+id/btnBorrar" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDisco"
+        android:layout_alignTop="@+id/lblDisco"
+        android:layout_toEndOf="@+id/lblDisco"
+        android:layout_alignEnd="@+id/listaDiscos" />
+
+    <Button
+        android:id="@+id/btnAñadir"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listaDiscos"
+        android:layout_alignParentStart="true"
+        android:layout_toEndOf="@+id/btnBorrar"
+        android:onClick="Añadir"
+        android:text="@string/a_adir" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ColeccionDiscos</string>
+    <string name="grupo">Grupo:</string>
+    <string name="disco">Disco:</string>
+    <string name="borrar">Borrar</string>
+    <string name="a_adir">Añadir</string>
+</resources>
