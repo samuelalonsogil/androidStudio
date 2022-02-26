@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StoringSimpleData</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="save">Save</string>
+</resources>
