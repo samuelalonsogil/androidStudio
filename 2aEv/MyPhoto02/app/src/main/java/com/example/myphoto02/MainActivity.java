@@ -17,9 +17,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
-
-    static final int CAPTURA_IMAGEN_THUMBNAIL = 1;
+public class MainActivity extends AppCompatActivity { static final int CAPTURA_IMAGEN_THUMBNAIL = 1;
     static final int CAPTURA_IMAGEN_TAMAÑO_REAL = 2;
     ImageView imageView;
     String fotoPath;
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     // onClick botón obtener thumbnail
     public void hacerFotoThumbnail (View view){
-        //cambiamos el intent0lll
+        //cambiamos el intent
         Intent hacerFotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (hacerFotoIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(hacerFotoIntent, CAPTURA_IMAGEN_THUMBNAIL);
