@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EjercicioSQLNovelas</string>
+    <string name="lista_novelas">Lista novelas</string>
+    <string name="titulo">titulo:</string>
+    <string name="autor">autor:</string>
+    <string name="country">country:</string>
+    <string name="editorial">editorial:</string>
+    <string name="price">price</string>
+    <string name="year">year:</string>
+    <string name="add">add</string>
+</resources>
