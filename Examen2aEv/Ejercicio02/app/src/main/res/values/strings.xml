@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio02</string>
+    <string name="search">search</string>
+    <string name="write_the_sms">write the sms:</string>
+</resources>

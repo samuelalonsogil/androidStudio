@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextId"
+
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/_id"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_below="@+id/editTextId"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/title"
+
+    />
+
+    <EditText
+        android:id="@+id/editTextAuthor"
+
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_below="@+id/editTextTitle"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/author"
+
+    />
+
+    <Button
+        android:id="@+id/buttonAdd"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextAuthor"
+        android:layout_marginStart="20sp"
+
+        android:layout_marginTop="10sp"
+
+        android:text="@string/add" />
+
+
+    <Button
+        android:id="@+id/buttonDelete"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextAuthor"
+        android:layout_toEndOf="@+id/buttonAdd"
+        android:layout_marginTop="10sp"
+
+        android:layout_marginStart="20sp"
+
+        android:text="@string/delete"
+
+    />
+
+    <Button
+        android:id="@+id/buttonModify"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/editTextAuthor"
+        android:layout_toEndOf="@+id/buttonDelete"
+        android:layout_marginTop="10sp"
+
+        android:layout_marginStart="20sp"
+
+        android:text="@string/modify"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewSelected"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonAdd"
+        android:layout_marginStart="100sp"
+    />
+
+    <TextView
+        android:id="@+id/textViewSelectedAuthor"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonAdd"
+        android:layout_toEndOf="@+id/textViewSelected"
+        android:layout_marginStart="50sp"
+        />
+
+
+    <ListView
+        android:id="@+id/listViewBooks"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/textViewSelected"
+        android:layout_marginTop="20sp"
+
+    />
+
+
+
+</RelativeLayout>

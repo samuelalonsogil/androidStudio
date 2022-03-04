@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ejercicio03CRUD</string>
+    <string name="title">Title:</string>
+    <string name="_id">id:</string>
+    <string name="author">author:</string>
+    <string name="search">search</string>
+    <string name="delete">delete</string>
+    <string name="modify">modify</string>
+    <string name="add">add</string>
+</resources>

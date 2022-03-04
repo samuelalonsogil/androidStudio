@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejercicio04Media</string>
+    <string name="elige_la_opci_n">Elige la opción:</string>
+    <string name="audio">audio</string>
+    <string name="video">video</string>
+    <string name="camera">camera</string>
+</resources>
